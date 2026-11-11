@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f7dce7">
+  <title>ل محمود من نونته ♡</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(145deg,#fff7fa,#f8e4ed 55%,#fff9fb);color:#593847;display:flex;align-items:center;justify-content:center;padding:24px}
+    .wrap{width:min(100%,680px);text-align:center}
+    .card{background:rgba(255,255,255,.86);border:1px solid #f1d4df;border-radius:28px;padding:clamp(20px,5vw,38px);box-shadow:0 18px 55px rgba(130,65,91,.12)}
+    .heart{font-size:27px;color:#d66b91;margin-bottom:8px}
+    h1{font-size:clamp(27px,6vw,40px);margin:8px 0;color:#a94f74}
+    .sub{color:#9b7182;margin:0 0 22px;font-size:15px}
+    img{width:100%;max-height:440px;object-fit:cover;border-radius:20px;border:5px solid #fff;box-shadow:0 8px 25px #b77b9225}
+    .date{margin:17px 0 8px;color:#b45f80;font-weight:bold}
+    .tiny{color:#9b7182;font-size:14px;margin:0 0 22px}
+    .message{white-space:pre-line;text-align:right;line-height:2.05;font-size:17px;color:#654452;background:#fff8fb;border-radius:18px;padding:22px;margin-top:20px}
+    .gate{max-width:420px;margin:0 auto}
+    .gate p{line-height:1.9;color:#896577}
+    input{width:100%;padding:15px 18px;border:1px solid #e8bfd0;border-radius:14px;font-size:19px;text-align:center;outline:none;background:#fff}
+    input:focus{border-color:#ce7396;box-shadow:0 0 0 3px #ce739620}
+    button{margin-top:13px;width:100%;border:0;border-radius:14px;padding:15px;background:#c96f91;color:white;font-size:17px;font-weight:bold;cursor:pointer}
+    button:hover{background:#b95d81}
+    #error{min-height:24px;color:#b33d65;font-size:14px;margin:10px 0 0}
+    .hidden{display:none}
+    footer{font-size:13px;color:#ad8293;margin-top:18px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card gate" id="gate">
+      <div class="heart">♡</div>
+      <h1>في حاجة حلوة مستنياك يا محمود</h1>
+      <p>كلمة السر هي عدد الأيام اللي فاتت من يوم ما بدأت حكايتنا<br>14 / 4 / 2024</p>
+      <input id="password" inputmode="numeric" autocomplete="off" placeholder="اكتب كلمة السر">
+      <button id="enter">افتح مفاجأتك ♡</button>
+      <div id="error" aria-live="polite"></div>
+    </section>
+
+    <section class="card hidden" id="content">
+      <div class="heart">♡</div>
+      <h1>ل محمود، من نونته</h1>
+      <p class="sub">من يوم 14 / 4 / 2024… ولسه كل يوم بحبك أكتر</p>
+      <img src="our-photo.jpg" alt="صورتنا سوا">
+      <div class="date">14 / 4 / 2024</div>
+      <p class="tiny">أحلى حكاية بدأت في اليوم ده ♡</p>
+      <div class="message">عامل أي حبيت أخلي المسج بطريقه كريتيف شوبه قولي أي رأيك
+
+عايزه اقولك إني بحبك اوي وإني معنديش أغلي ولا احن منك علي قلبي كل ذكره بينا ليها معني كبير اوي جوايا بحب قريك بحب حتا فكره أننا بس سوا وجودك بيطمني مش عايزه غيرك من كل الدنيا يمكن الفتره دي حاجات كتيرمتلغبطه بس انا عارفه و واثقه أن كل حاجه خير وأنها فتره وهتعدي وكل حاجه هتكون كويسه الحياه اختبارات وأنا واثقه أنك قد كل الدنيا فخوره بحبيبي وبكل حاجه بتعملها مهما كانت بسيطه انت أغلي من عيني بجد ربنا يديمك ليا ويخليك لقلبي ويشفيك و يهديك ويريح بالك يحبيبي يارب نونتك معاك وبتحبك وفخوره بيك و واثقه ي حب ف حب عمرها خليك معايا اتفقنا انت مصدر قوتي ومصدر أماني ومصدر كل الراحه اللي انا فيها مجرد اختفاءك عندي ساعتين بقلق واتوتر واتوه انت كل الأمان بالنسبالي بتمني يومك يكون لطيف وكل أيامك الجايه تكون خير وفرحه لقلبك بحبك يمودي 🫂</div>
+      <footer>اتفقنا نفضل سوا؟ ♡</footer>
+    </section>
+  </main>
+<script>
+  // كلمة السر = عدد الأيام المكتملة منذ 14 أبريل 2024، وتتغير تلقائيًا كل يوم.
+  function daysTogether(){
+    const start = Date.UTC(2024, 3, 14);
+    const now = new Date();
+    const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.floor((today - start) / 86400000);
+  }
+  function unlock(){
+    const typed = document.getElementById('password').value.trim();
+    if (typed === String(daysTogether())) {
+      document.getElementById('gate').classList.add('hidden');
+      document.getElementById('content').classList.remove('hidden');
+    } else {
+      document.getElementById('error').textContent = 'مش هي دي يا مودي، جرّب عدد أيام حكايتنا ♡';
+    }
+  }
+  document.getElementById('enter').addEventListener('click', unlock);
+  document.getElementById('password').addEventListener('keydown', e => { if(e.key === 'Enter') unlock(); });
+</script>
+</body>
+</html>
